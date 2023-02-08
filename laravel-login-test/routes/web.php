@@ -3,21 +3,14 @@
 use App\Http\Controllers\ProfileController;
 use Illuminate\Support\Facades\Route;
 
-/*
-|--------------------------------------------------------------------------
-| Web Routes
-|--------------------------------------------------------------------------
-|
-| Here is where you can register web routes for your application. These
-| routes are loaded by the RouteServiceProvider within a group which
-| contains the "web" middleware group. Now create something great!
-|
-*/
+// Add Controller
+use App\Http\Controllers\MainController;
 
-Route::get('/', function () {
-    return view('pages.welcome');
-});
+// Guest Pages
+Route::get('/', [MainController::class, 'home']) -> name('guestHome');
+Route::get('/portfolio', [MainController::class, 'portfolio']) -> name('guestPortfolio');
 
+// Logged Pages
 Route::get('/dashboard', function () {
     return view('pages.dashboard');
 })->middleware(['auth', 'verified'])->name('dashboard');
