@@ -1,7 +1,8 @@
 @extends('layouts.main-layouts')
 
 @section('main')
-    <section class="container-fluid">
+<section id="about_me">
+    <section class="my_background container-fluid mt-5 text-light">
         <div class="container">
             {{-- Title --}}
             <div class="d-flex flex-column align-items-center mt-3 p-4">
@@ -20,7 +21,7 @@
                     <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Tempora fugiat optio excepturi consectetur deleniti nihil aperiam non, eligendi amet accusantium voluptates modi voluptatum minus consequatur nemo temporibus architecto commodi beatae.</p>
 
                     <a href="portfolio" class="btn btn-primary rounded-pill">
-                        Here Me
+                        My Projects
                     </a>
                 </div>
     
@@ -33,4 +34,5 @@
 
         </div>
     </section>
+</section>
 @endsection

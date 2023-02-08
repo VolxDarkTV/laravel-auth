@@ -1,8 +1,8 @@
 @extends('layouts.main-layouts')
 
 @section('main')
-<section class="container-fluid">
-    <div class="container d-flex flex-column align-items-center gap-4 mt-3">
+<section class="container-fluid mt-5 pt-1">
+    <div class="container d-flex flex-column align-items-center gap-4 mt-5">
 
 
         <h1>Portfolio</h1>
