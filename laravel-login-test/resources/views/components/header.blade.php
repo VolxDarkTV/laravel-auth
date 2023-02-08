@@ -39,7 +39,7 @@
                         <a class="dropdown-item" href="{{ url('dashboard') }}">{{__('Dashboard')}}</a>
 
                         {{-- Profile --}}
-                        <a class="dropdown-item" href="{{ route('profile.edit') }}">Profile</a>
+                        {{-- <a class="dropdown-item" href="{{ route('profile.edit') }}">Profile</a> --}}
 
                         <a class="dropdown-item" href="{{ route('logout') }}" onclick="event.preventDefault();
                                              document.getElementById('logout-form').submit();">
