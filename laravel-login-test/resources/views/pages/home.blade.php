@@ -19,7 +19,7 @@
                     <h2 class="py-3 fw-bold">I'm Vincenzo</h2>
                     <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Tempora fugiat optio excepturi consectetur deleniti nihil aperiam non, eligendi amet accusantium voluptates modi voluptatum minus consequatur nemo temporibus architecto commodi beatae.</p>
 
-                    <a href="#" class="btn btn-primary rounded-pill">
+                    <a href="portfolio" class="btn btn-primary rounded-pill">
                         Here Me
                     </a>
                 </div>
