@@ -12,7 +12,7 @@
             <!-- Left Side Of Navbar -->
             <ul class="navbar-nav me-auto">
                 <li class="nav-item d-flex gap-3">
-                    <a class="nav-link" href="{{url('/') }}">{{ __('Home') }}</a>
+                    <a class="nav-link" href="{{url('/') }}">{{ __('About Me') }}</a>
                     <a class="nav-link" href="portfolio">Portfolio</a>
                 </li>
             </ul>
