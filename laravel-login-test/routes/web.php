@@ -5,10 +5,15 @@ use Illuminate\Support\Facades\Route;
 
 // Add Controller
 use App\Http\Controllers\MainController;
+use App\Http\Controllers\ProjectController;
+
 
 // Guest Pages
 Route::get('/', [MainController::class, 'home']) -> name('guestHome');
-Route::get('/portfolio', [MainController::class, 'portfolio']) -> name('guestPortfolio');
+
+Route::get('/portfolio', [ProjectController::class, 'portfolio']) -> name('guestPortfolio');
+
+
 
 // Logged Pages
 Route::get('/dashboard', function () {
