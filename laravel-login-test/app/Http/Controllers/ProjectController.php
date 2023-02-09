@@ -17,4 +17,16 @@ class ProjectController extends Controller
 
         return view('pages.portfolio', $data);
     }
+
+    // --- projectShow
+    public function projectShow(Project $project){
+
+        // $project = Project::find($id);
+
+        // $data = [
+        //     'project' => $project
+        // ];
+
+        return view('pages.projectShow', compact('project'));
+    }
 }

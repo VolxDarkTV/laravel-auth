@@ -11,12 +11,12 @@
             <ul class="d-flex justify-content-around flex-wrap gap-3">
                 @foreach ($projects as $project)
                     <li class="d-flex">
-                        <div class="card" style="width: 18rem;">
+                        <a href=" {{ route('portfolio.show', $project) }} " class="card" style="width: 18rem;">
                             <img src="{{$project -> project_img}}" class="card-img-top" alt="...">
                             <div class="card-body">
                               <p class="card-text">{{$project -> project_description}}</p>
                             </div>
-                        </div>
+                        </a>
                     </li>
                 @endforeach
             </ul>
