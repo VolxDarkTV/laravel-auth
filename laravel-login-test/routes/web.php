@@ -34,6 +34,14 @@ Route::post('/project/store', [ProjectController::class, 'projectStore'])->middl
 Route::get('/project/delete{project}', [ProjectController::class, 'projectDelete'])->middleware(['auth', 'verified'])
 -> name('project.delete');
 
+// Edit
+Route::get('/project/edit{project}', [ProjectController::class, 'projectEdit'])->middleware(['auth', 'verified'])
+-> name('project.edit');
+
+// Update
+Route::post('/project/update{project}', [ProjectController::class, 'projectUpdate'])->middleware(['auth', 'verified'])
+-> name('project.update');
+
 
 Route::get('/dashboard', function () {
     return view('pages.dashboard');

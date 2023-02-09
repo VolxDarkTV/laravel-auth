@@ -9,24 +9,24 @@
         
             @include('components.errors')
         
-            <form method="POST" action="{{ route('project.store') }}">
+            <form method="POST" action="{{ route('project.update', $project) }}">
                 @csrf
                 <label for="name">Name</label>
-                <input id="name" type="text" name="name">
+                <input id="name" type="text" name="name" value="{{ $project -> name }}">
                 <br>
                 <label for="code_type">Code Type</label>
-                <input id="code_type" type="text" name="code_type">
+                <input id="code_type" type="text" name="code_type" value="{{ $project -> code_type }}">
                 <br>
                 <label for="date">Date</label>
-                <input id="date" type="date" name="date">
+                <input id="date" type="date" name="date" value="{{ $project -> date }}">
                 <br>
                 <label for="project_img">Link Img</label>
-                <input id="project_img" type="text" name="project_img">
+                <input id="project_img" type="text" name="project_img" value="{{ $project -> project_img }}">
                 <br>
                 <label for="project_description">Description</label>
-                <textarea type="text" name="project_description" placeholder="not request"></textarea>
+                <textarea type="text" name="project_description" placeholder="not request">{{ $project -> project_description }}</textarea>
                 <br>
-                <input id="project_description" type="submit" value="CREATE NEW PROJECT">
+                <input id="project_description" type="submit" value="EDIT">
             </form>
         </div>
 

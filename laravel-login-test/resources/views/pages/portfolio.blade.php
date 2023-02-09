@@ -32,6 +32,7 @@
                                 {{-- Delete --}}
                                 @auth
                                     <a class="btn btn-danger" href="{{route('project.delete', $project)}}">x</a>
+                                    <a class="btn btn-warning" href="{{ route('project.edit', $project) }}">Edit</a>
                                 @endauth
 
                             </figcaption>

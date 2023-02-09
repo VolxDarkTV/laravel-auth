@@ -61,12 +61,39 @@ class ProjectController extends Controller
         return redirect() -> route('guestHome');
     }
 
-    // projectDelete
+    // --- projectDelete
 
     public function projectDelete(Project $project){
 
         $project -> delete();
 
         return redirect() -> route('guestHome');
+    }
+
+    // --- projectEdit
+    public function projectEdit(Project $project){
+
+        $data = [
+            'project' => $project
+        ];
+        return view('pages.projectEdit', $data);
+    }
+
+    public function projectUpdate(Request $request, Project $project){
+        $data = $request -> all();
+
+        $project -> name = $data['name'];
+        $project -> code_type = $data['code_type'];
+        $project -> date = $data['date'];
+        $project -> project_img = $data['project_img'];
+        $project -> project_description = $data['project_description'];
+        
+        $project -> save();
+
+        // add parameter Project
+        $data = [
+            'project' => $project
+        ];
+        return redirect() -> route('project.show', $data);
     }
 }
