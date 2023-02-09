@@ -24,10 +24,13 @@
                         My Projects
                     </a>
                 </div>
-    
-                <a href="https://www.linkedin.com/in/vincenzo-foti-aa5b1a263/" class="d-flex justify-content-center rounded-circle border border-white border-3">
-                    <img class="shadow rounded-circle" src="https://media.licdn.com/dms/image/D4E03AQFGJ00qcxpDTw/profile-displayphoto-shrink_200_200/0/1674861315171?e=1681344000&v=beta&t=oJcUpZl6rv3860njAAk5_bh23d0H4tX6y15NecXSkxU" alt="profile img">
-                </a>
+                
+                <div class="d-flex flex-column align-items-center">
+                    <a href="https://www.linkedin.com/in/vincenzo-foti-aa5b1a263/" class="d-flex justify-content-center rounded-circle border border-white border-3">
+                        <img class="shadow rounded-circle" src="https://media.licdn.com/dms/image/D4E03AQFGJ00qcxpDTw/profile-displayphoto-shrink_200_200/0/1674861315171?e=1681344000&v=beta&t=oJcUpZl6rv3860njAAk5_bh23d0H4tX6y15NecXSkxU" alt="profile img">
+                    </a>
+                    <span class="text-primary">Linkedin</span>
+                </div>
 
             </div>
 
