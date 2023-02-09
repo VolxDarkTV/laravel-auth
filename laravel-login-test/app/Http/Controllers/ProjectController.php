@@ -42,7 +42,7 @@ class ProjectController extends Controller
         // $data = $request -> all();
         $data = $request -> validate([
             'name' => 'required|string|max:64|alpha',
-            'code_type' => 'required|string|max:32|alpha:ascii',
+            'code_type' => 'required|string|max:32|alpha',
             'date' => 'required|date|before:today',
             'project_img' => 'required',
             'project_description' => 'nullable|string',

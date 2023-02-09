@@ -13,11 +13,11 @@
                     <li class="d-flex">
 
                         <figure class="my_card image-block">
-                            <h1>{{$project -> name}}</h1>
+                            <h5 class="my_name_card">{{$project -> code_type}}</h5>
                             <img src="{{$project -> project_img}}" alt="" />
                             <figcaption class="rounded-top text-center">
 
-                                <h3>
+                                <h3 class="my_more_info_title">
                                     More Info
                                 </h3>
 
@@ -32,7 +32,7 @@
     
                                     {{-- Delete --}}
                                     @auth
-                                        <a class="btn btn-danger" href="{{route('project.delete', $project)}}">x</a>
+                                        <a class="btn btn-danger" href="{{route('project.delete', $project)}}"><i class="fa-solid fa-trash"></i></a>
                                         <a class="btn btn-warning" href="{{ route('project.edit', $project) }}">Edit</a>
                                     @endauth
                                 </div>
