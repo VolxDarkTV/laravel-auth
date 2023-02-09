@@ -13,7 +13,7 @@ Route::get('/', [MainController::class, 'home'])
     -> name('guestHome');
 
 Route::get('/portfolio', [ProjectController::class, 'portfolio']) 
-    -> name('guestPortfolio');
+    -> name('guest.portfolio');
 
 // Show
 Route::get('/project/show{project}', [ProjectController::class, 'projectShow'])

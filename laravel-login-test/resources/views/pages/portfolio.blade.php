@@ -16,7 +16,11 @@
                             <div class="card-body">
                               <p class="card-text">{{$project -> project_description}}</p>
                             </div>
-                            <a href="{{route('project.delete', $project)}}">x</a>
+
+                            @auth
+                                <a class="btn btn-danger" href="{{route('project.delete', $project)}}">x</a>
+
+                            @endauth
                             
                         </a>
                     </li>

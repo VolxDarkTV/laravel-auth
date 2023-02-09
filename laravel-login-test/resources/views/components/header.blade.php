@@ -13,7 +13,7 @@
             <ul class="navbar-nav me-auto">
                 <li class="nav-item d-flex gap-3">
                     <a class="nav-link" href="{{url('/') }}">{{ __('About Me') }}</a>
-                    <a class="nav-link" href="portfolio">Portfolio</a>
+                    <a class="nav-link" href="{{route('guest.portfolio')}}">Portfolio</a>
                 </li>
             </ul>
 
