@@ -11,22 +11,11 @@
             <ul class="d-flex justify-content-around flex-wrap gap-3">
                 @foreach ($projects as $project)
                     <li class="d-flex">
-                        {{-- <a href=" {{ route('project.show', $project) }} " class="card" style="width: 18rem;">
-                            <img src="{{$project -> project_img}}" class="card-img-top" alt="...">
-                            <div class="card-body">
-                              <p class="card-text">{{$project -> project_description}}</p>
-                            </div>
-
-                            @auth
-                                <a class="btn btn-danger" href="{{route('project.delete', $project)}}">x</a>
-
-                            @endauth
-                            
-                        </a> --}}
+                        
                         <figure class="my_card image-block">
                             <h1>{{$project -> name}}</h1>
                             <img src="{{$project -> project_img}}" alt="" />
-                            <figcaption>
+                            <figcaption class="rounded-top">
 
                                 <h3>
                                     More Info
@@ -47,6 +36,20 @@
 
                             </figcaption>
                         </figure>
+
+                        {{-- <a href=" {{ route('project.show', $project) }} " class="card" style="width: 18rem;">
+                            <img src="{{$project -> project_img}}" class="card-img-top" alt="...">
+                            <div class="card-body">
+                              <p class="card-text">{{$project -> project_description}}</p>
+                            </div>
+
+                            @auth
+                                <a class="btn btn-danger" href="{{route('project.delete', $project)}}">x</a>
+
+                            @endauth
+                            
+                        </a> --}}
+                        
                             
                     </li>
                 @endforeach
