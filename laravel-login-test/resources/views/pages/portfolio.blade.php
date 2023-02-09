@@ -15,7 +15,7 @@
                         <figure class="my_card image-block">
                             <h1>{{$project -> name}}</h1>
                             <img src="{{$project -> project_img}}" alt="" />
-                            <figcaption class="rounded-top">
+                            <figcaption class="rounded-top text-center">
 
                                 <h3>
                                     More Info
@@ -24,16 +24,18 @@
                                 {{-- Description --}}
                                 <p>{{$project -> project_description}}</p>
 
-                                {{-- Show --}}
-                                <a class="btn btn-success" href="{{ route('project.show', $project) }}">
-                                    More Info
-                                </a>
-
-                                {{-- Delete --}}
-                                @auth
-                                    <a class="btn btn-danger" href="{{route('project.delete', $project)}}">x</a>
-                                    <a class="btn btn-warning" href="{{ route('project.edit', $project) }}">Edit</a>
-                                @endauth
+                                <div class="d-flex justify-content-evenly">
+                                    {{-- Show --}}
+                                    <a class="btn btn-success" href="{{ route('project.show', $project) }}">
+                                        More Info
+                                    </a>
+    
+                                    {{-- Delete --}}
+                                    @auth
+                                        <a class="btn btn-danger" href="{{route('project.delete', $project)}}">x</a>
+                                        <a class="btn btn-warning" href="{{ route('project.edit', $project) }}">Edit</a>
+                                    @endauth
+                                </div>
 
                             </figcaption>
                         </figure>
