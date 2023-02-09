@@ -40,9 +40,9 @@ a{
         display: flex;
         align-items: center;
         justify-content: center;
-        width: 375px;
-        min-width: 375px;
-        height: 667px;
+        width: 100%;
+        // min-width: 375px;
+        height: 500px;
         border-radius: 10px;
         box-shadow: 
             0 1px 3px rgba(0,0,0,0.12), 
@@ -61,7 +61,7 @@ a{
                 transform: scale(1.25);
             }
             figcaption {
-                top: 50%;
+                top: 35%;
             }
         }
         h1 {
@@ -85,7 +85,7 @@ a{
         }
         figcaption {
             position: absolute;
-            top: 88%;
+            top: 85%;
             left: 0;
             width: 100%;
             height: 350px;

@@ -8,10 +8,10 @@
     
             <h1>Portfolio</h1>
         
-            <ul class="d-flex justify-content-around flex-wrap gap-3">
+            <ul class="d-flex justify-content-around flex-wrap row row-cols-4">
                 @foreach ($projects as $project)
                     <li class="d-flex">
-                        
+
                         <figure class="my_card image-block">
                             <h1>{{$project -> name}}</h1>
                             <img src="{{$project -> project_img}}" alt="" />
