@@ -41,10 +41,10 @@ class ProjectController extends Controller
 
         // $data = $request -> all();
         $data = $request -> validate([
-            'name' => 'required|string|max:64|alpha',
-            'code_type' => 'required|string|max:32|alpha',
+            'name' => 'required|string|max:64',
+            'code_type' => 'required|string|max:32',
             'date' => 'required|date|before:today',
-            'project_img' => 'required',
+            'project_img' => 'required|url',
             'project_description' => 'nullable|string',
         ]);
 
@@ -58,7 +58,7 @@ class ProjectController extends Controller
         
         $project -> save();
 
-        return redirect() -> route('guestHome');
+        return redirect() -> route('project');
     }
 
     // --- projectDelete
@@ -67,7 +67,7 @@ class ProjectController extends Controller
 
         $project -> delete();
 
-        return redirect() -> route('guestHome');
+        return redirect() -> route('project');
     }
 
     // --- projectEdit
@@ -80,7 +80,15 @@ class ProjectController extends Controller
     }
 
     public function projectUpdate(Request $request, Project $project){
-        $data = $request -> all();
+        // $data = $request -> all();
+
+        $data = $request -> validate([
+            'name' => 'required|string|max:64',
+            'code_type' => 'required|string|max:32',
+            'date' => 'required|date|before:today',
+            'project_img' => 'required|url',
+            'project_description' => 'nullable|string',
+        ]);
 
         $project -> name = $data['name'];
         $project -> code_type = $data['code_type'];
