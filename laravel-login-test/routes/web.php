@@ -14,11 +14,27 @@ Route::get('/', [MainController::class, 'home'])
 
 Route::get('/portfolio', [ProjectController::class, 'portfolio']) 
     -> name('guestPortfolio');
-Route::get('/portfolio/show{project}', [ProjectController::class, 'projectShow'])
-    -> name('portfolio.show');
+
+// Show
+Route::get('/project/show{project}', [ProjectController::class, 'projectShow'])
+    -> name('project.show');
 
 
 // Logged Pages
+
+// Create
+Route::get('/project/create', [ProjectController::class, 'projectCreate'])->middleware(['auth', 'verified'])
+    -> name('project.create');
+
+// Store
+Route::post('/project/store', [ProjectController::class, 'projectStore'])->middleware(['auth', 'verified'])
+    -> name('project.store');
+
+// Delete
+Route::get('/project/delete{project}', [ProjectController::class, 'projectDelete'])->middleware(['auth', 'verified'])
+-> name('project.delete');
+
+
 Route::get('/dashboard', function () {
     return view('pages.dashboard');
 })->middleware(['auth', 'verified'])->name('dashboard');

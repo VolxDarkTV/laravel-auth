@@ -20,7 +20,7 @@ return new class extends Migration
             $table -> string('code_type', 32);
             $table -> date('date');
             $table -> string('project_img');
-            $table -> text('project_description');
+            $table -> text('project_description') -> nullable(true);
 
             $table -> timestamps();
         });
