@@ -25,9 +25,9 @@
                     </a>
                 </div>
     
-                <div class="d-flex justify-content-center w-25">
-                    <img class="shadow rounded-circle" src="https://www.w3schools.com/howto/img_avatar.png" alt="profile img">
-                </div>
+                <a href="https://www.linkedin.com/in/vincenzo-foti-aa5b1a263/" class="d-flex justify-content-center rounded-circle border border-white border-3">
+                    <img class="shadow rounded-circle" src="https://media.licdn.com/dms/image/D4E03AQFGJ00qcxpDTw/profile-displayphoto-shrink_200_200/0/1674861315171?e=1681344000&v=beta&t=oJcUpZl6rv3860njAAk5_bh23d0H4tX6y15NecXSkxU" alt="profile img">
+                </a>
 
             </div>
 
