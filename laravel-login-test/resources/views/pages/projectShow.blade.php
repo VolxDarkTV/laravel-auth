@@ -20,7 +20,9 @@
                     {{-- Delete --}}
                     @auth
                         <div class="d-flex justify-content-evenly">
-                            <a class="btn btn-danger" href="{{route('project.delete', $project)}}">x</a>
+                            <a class="btn btn-danger" href="{{route('project.delete', $project)}}">
+                                <i class="fa-solid fa-trash"></i>
+                            </a>
                             <a class="btn btn-warning" href="{{route('project.edit', $project)}}">Edit</a>
                         </div>
                     @endauth
