@@ -18,13 +18,13 @@
         @method('patch')
 
         <div>
-            <label for="name">Name: {{ $user -> name }}</label>
+            <label for="name"> <b>Admin:</b> {{ $user -> name }}</label>
             <input id="name" name="name" type="text" class="mt-1 block w-full" value="{{$user -> name}}" required autofocus autocomplete="name" />
             {{-- <input class="mt-2" :messages="$errors->get('name')" /> --}}
         </div>
 
         <div>
-            <label for="email">Mail: {{$user -> email}}</label>
+            <label for="email"> <b>E-mail:</b> {{$user -> email}}</label>
             <input id="email" name="email" type="email" class="mt-1 block w-full" value="{{$user -> email}}" />
             {{-- <input class="mt-2" :messages="$errors->get('email')" /> --}}
 
