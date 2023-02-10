@@ -3,6 +3,8 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+// Storage
+use Illuminate\Support\Facades\Storage;
 // Model
 use App\Models\Project;
 
@@ -43,11 +45,15 @@ class ProjectController extends Controller
         $data = $request -> validate([
             'name' => 'required|string|max:64',
             'code_type' => 'required|string|max:32',
-            'date' => 'required|date|before:today',
-            'project_img' => 'required|url',
+            'date' => 'required|date|before:tomorrow',
+            'project_img' => 'required|image|mimes:jpg,png,jpeg,gif,svg|max: 2048',
             'project_description' => 'nullable|string',
             'repo_link' => 'required|url',
         ]);
+
+        // PUT IMG
+        $img_path = Storage::put('uploads', $data['project_img']);
+        $data['project_img'] = $img_path;
 
         $project = new Project();
 
@@ -87,8 +93,8 @@ class ProjectController extends Controller
         $data = $request -> validate([
             'name' => 'required|string|max:64',
             'code_type' => 'required|string|max:32',
-            'date' => 'required|date|before:today',
-            'project_img' => 'required|url',
+            'date' => 'required|date|before:tomorrow',
+            'project_img' => 'required|image|mimes:jpg,png,jpeg,gif,svg|max: 2048',
             'project_description' => 'nullable|string',
             'repo_link' => 'required|url',
         ]);
@@ -101,6 +107,11 @@ class ProjectController extends Controller
         $project -> repo_link = $data['repo_link'];
         
         $project -> save();
+
+        // PUT IMG
+        $img_path = Storage::put('uploads', $data['project_img']);
+        $data['project_img'] = $img_path;
+
 
         // add parameter Project
         $data = [

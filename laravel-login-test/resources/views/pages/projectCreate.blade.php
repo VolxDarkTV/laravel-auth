@@ -9,7 +9,7 @@
         
             @include('components.errors')
         
-            <form method="POST" action="{{ route('project.store') }}">
+            <form method="POST" action="{{ route('project.store') }}" enctype="multipart/form-data">
                 @csrf
                 <label for="name">Name</label>
                 <input id="name" type="text" name="name">
@@ -21,7 +21,7 @@
                 <input id="date" type="date" name="date">
                 <br>
                 <label for="project_img">Link Img</label>
-                <input id="project_img" type="text" name="project_img">
+                <input id="project_img" type="file" name="project_img">
                 <br>
                 <label for="project_description">Description</label>
                 <textarea type="text" name="project_description" placeholder="not request"></textarea>
