@@ -11,7 +11,7 @@
                     In this 6 months
                 </span>
             </div>
-
+            
             {{-- Illustrate --}}
             <div class="d-flex align-items-center justify-content-lg-around justify-content-sm-center row row-cols-lg-2 row-cols-s-1">
 

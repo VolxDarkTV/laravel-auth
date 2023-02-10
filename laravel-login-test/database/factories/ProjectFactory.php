@@ -20,10 +20,10 @@ class ProjectFactory extends Factory
             'name' => fake() -> word(3),
             'code_type' => fake() -> word(1),
             'date' => fake() -> dateTime(),
-            'project_img' => fake() -> imageUrl(),
+            // 'project_img' => fake() -> imageUrl(),
             'project_description' => fake() -> text(),
             'repo_link' => fake() -> url(),
-            
+
         ];
     }
 }

@@ -19,9 +19,9 @@ return new class extends Migration
             $table -> string('name', 64);
             $table -> string('code_type', 32);
             $table -> date('date');
-            $table -> string('project_img');
+            $table -> string('project_img') -> default('404_not_found.jpg');
             $table -> text('project_description') -> nullable(true);
-            $table -> string('repo_link') -> unique();
+            $table -> string('repo_link');
 
             $table -> timestamps();
         });

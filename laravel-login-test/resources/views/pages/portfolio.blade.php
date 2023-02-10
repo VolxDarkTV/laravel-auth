@@ -14,7 +14,7 @@
 
                         <figure class="my_card image-block">
                             <h5 class="my_name_card">{{$project -> code_type}}</h5>
-                            <img src="{{$project -> project_img}}" alt="" />
+                            <img src="{{ asset('storage/' . $project -> project_img) }}" alt="" />
                             <figcaption class="rounded-top text-center">
 
                                 <h3 class="my_more_info_title">

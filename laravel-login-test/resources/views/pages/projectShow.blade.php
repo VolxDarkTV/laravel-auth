@@ -7,7 +7,7 @@
         <div class="container mt-5 pt-5 text-dark d-flex justify-content-center">
             <figure class="my_card image-block">
                 <h1>{{$project -> name}}</h1>
-                <img src="{{$project -> project_img}}" alt="" />
+                <img src="{{ asset('storage/' . $project -> project_img) }}" alt="" />
                 <figcaption class="rounded-top">
     
                     <h3>
