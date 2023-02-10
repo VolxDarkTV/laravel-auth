@@ -46,6 +46,7 @@ class ProjectController extends Controller
             'date' => 'required|date|before:today',
             'project_img' => 'required|url',
             'project_description' => 'nullable|string',
+            'repo_link' => 'required|url',
         ]);
 
         $project = new Project();
@@ -55,6 +56,7 @@ class ProjectController extends Controller
         $project -> date = $data['date'];
         $project -> project_img = $data['project_img'];
         $project -> project_description = $data['project_description'];
+        $project -> repo_link = $data['repo_link'];
         
         $project -> save();
 
@@ -88,6 +90,7 @@ class ProjectController extends Controller
             'date' => 'required|date|before:today',
             'project_img' => 'required|url',
             'project_description' => 'nullable|string',
+            'repo_link' => 'required|url',
         ]);
 
         $project -> name = $data['name'];
@@ -95,6 +98,7 @@ class ProjectController extends Controller
         $project -> date = $data['date'];
         $project -> project_img = $data['project_img'];
         $project -> project_description = $data['project_description'];
+        $project -> repo_link = $data['repo_link'];
         
         $project -> save();
 

@@ -21,6 +21,7 @@ return new class extends Migration
             $table -> date('date');
             $table -> string('project_img');
             $table -> text('project_description') -> nullable(true);
+            $table -> string('repo_link') -> unique();
 
             $table -> timestamps();
         });

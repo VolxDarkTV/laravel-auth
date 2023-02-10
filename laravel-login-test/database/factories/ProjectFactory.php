@@ -22,7 +22,8 @@ class ProjectFactory extends Factory
             'date' => fake() -> dateTime(),
             'project_img' => fake() -> imageUrl(),
             'project_description' => fake() -> text(),
-
+            'repo_link' => fake() -> url(),
+            
         ];
     }
 }

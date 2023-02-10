@@ -27,9 +27,10 @@
                                 <div class="d-flex justify-content-evenly">
                                     {{-- Show --}}
                                     <a class="btn btn-success" href="{{ route('project.show', $project) }}">
-                                        More Info
+                                        Info
                                     </a>
-    
+                                    {{-- Repo Link --}}
+                                    <a class="btn btn-info" href="{{$project -> repo_link}}">Repo</a>
                                     {{-- Delete --}}
                                     @auth
                                         <a class="btn btn-danger" href="{{route('project.delete', $project)}}"><i class="fa-solid fa-trash"></i></a>
