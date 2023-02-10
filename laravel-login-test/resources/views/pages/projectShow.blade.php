@@ -21,7 +21,9 @@
                     {{-- Delete --}}
                     <div class="d-flex justify-content-evenly">
                         {{-- Repo Link --}}
-                        <a class="btn btn-info" href="{{$project -> repo_link}}">Repo</a>
+                        <a class="btn btn-info" href="{{$project -> repo_link}}">
+                            <i class="fa-brands fa-github"></i>
+                        </a>
                         @auth
                             <a class="btn btn-danger" href="{{route('project.delete', $project)}}">
                                 <i class="fa-solid fa-trash"></i>

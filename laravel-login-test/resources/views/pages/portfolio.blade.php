@@ -3,12 +3,12 @@
 @section('main')
 <section id="portfolio">
     <section class="my_background container-fluid mt-5 pt-1 pb-5">
-        <div class="container d-flex flex-column align-items-center gap-4 mt-5">
+        <div class="d-flex flex-column align-items-center gap-4 mt-5">
     
     
             <h1>Portfolio</h1>
         
-            <ul class="d-flex justify-content-around flex-wrap row row-cols-4">
+            <ul class="container-lg container-md container-s d-flex justify-content-around flex-wrap row row-cols-lg-3 row-cols-md-2 row-cols-s-1">
                 @foreach ($projects as $project)
                     <li class="d-flex">
 
@@ -30,10 +30,14 @@
                                         Info
                                     </a>
                                     {{-- Repo Link --}}
-                                    <a class="btn btn-info" href="{{$project -> repo_link}}">Repo</a>
+                                    <a class="btn btn-info" href="{{$project -> repo_link}}">
+                                        <i class="fa-brands fa-github"></i>
+                                    </a>
                                     {{-- Delete --}}
                                     @auth
-                                        <a class="btn btn-danger" href="{{route('project.delete', $project)}}"><i class="fa-solid fa-trash"></i></a>
+                                        <a class="btn btn-danger" href="{{route('project.delete', $project)}}">
+                                            <i class="fa-solid fa-trash"></i>
+                                        </a>
                                         <a class="btn btn-warning" href="{{ route('project.edit', $project) }}">Edit</a>
                                     @endauth
                                 </div>
