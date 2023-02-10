@@ -16,7 +16,7 @@ Route::get('/project', [ProjectController::class, 'portfolio'])
     -> name('project');
 
 // Show
-Route::get('/project/show{project}', [ProjectController::class, 'projectShow'])
+Route::get('/project/show/{project}', [ProjectController::class, 'projectShow'])
     -> name('project.show');
 
 
@@ -31,15 +31,15 @@ Route::post('/project/store', [ProjectController::class, 'projectStore'])->middl
     -> name('project.store');
 
 // Delete
-Route::get('/project/delete{project}', [ProjectController::class, 'projectDelete'])->middleware(['auth', 'verified'])
+Route::get('/project/delete/{project}', [ProjectController::class, 'projectDelete'])->middleware(['auth', 'verified'])
 -> name('project.delete');
 
 // Edit
-Route::get('/project/edit{project}', [ProjectController::class, 'projectEdit'])->middleware(['auth', 'verified'])
+Route::get('/project/edit/{project}', [ProjectController::class, 'projectEdit'])->middleware(['auth', 'verified'])
 -> name('project.edit');
 
 // Update
-Route::post('/project/update{project}', [ProjectController::class, 'projectUpdate'])->middleware(['auth', 'verified'])
+Route::post('/project/update/{project}', [ProjectController::class, 'projectUpdate'])->middleware(['auth', 'verified'])
 -> name('project.update');
 
 
