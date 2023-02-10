@@ -99,6 +99,12 @@ class ProjectController extends Controller
             'repo_link' => 'required|url',
         ]);
 
+        // $old_file = $project -> project_img;
+        
+        // PUT IMG
+        $img_path = Storage::put('uploads', $data['project_img']);
+        $data['project_img'] = $img_path;
+
         $project -> name = $data['name'];
         $project -> code_type = $data['code_type'];
         $project -> date = $data['date'];
@@ -108,9 +114,8 @@ class ProjectController extends Controller
         
         $project -> save();
 
-        // PUT IMG
-        $img_path = Storage::put('uploads', $data['project_img']);
-        $data['project_img'] = $img_path;
+        // Storage::delete($old_file);
+        
 
 
         // add parameter Project
