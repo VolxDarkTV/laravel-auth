@@ -8,7 +8,7 @@
     
             <h1>Portfolio</h1>
         
-            <ul class="container-lg container-md container-s d-flex justify-content-around flex-wrap row row-cols-lg-3 row-cols-md-2 row-cols-s-1">
+            <ul class="container-lg container-md container-sm d-flex justify-content-around flex-wrap row row-cols-lg-3 row-cols-md-2 row-cols-sm-1">
                 @foreach ($projects as $project)
                     <li class="d-flex">
 
