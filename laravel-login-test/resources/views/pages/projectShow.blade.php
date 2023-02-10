@@ -16,16 +16,19 @@
     
                     {{-- Description --}}
                     <p>{{$project -> project_description}}</p>
-    
+
+                    
                     {{-- Delete --}}
-                    @auth
-                        <div class="d-flex justify-content-evenly">
+                    <div class="d-flex justify-content-evenly">
+                        {{-- Repo Link --}}
+                        <a class="btn btn-info" href="{{$project -> repo_link}}">Repo</a>
+                        @auth
                             <a class="btn btn-danger" href="{{route('project.delete', $project)}}">
                                 <i class="fa-solid fa-trash"></i>
                             </a>
                             <a class="btn btn-warning" href="{{route('project.edit', $project)}}">Edit</a>
-                        </div>
-                    @endauth
+                        @endauth
+                    </div>
     
                 </figcaption>
             </figure>

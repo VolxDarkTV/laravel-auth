@@ -26,6 +26,9 @@
                 <label for="project_description">Description</label>
                 <textarea type="text" name="project_description" placeholder="not request">{{ $project -> project_description }}</textarea>
                 <br>
+                <label for="repo_link">Link Repo</label>
+                <input id="repo_link" type="text" name="repo_link" value="{{ $project -> repo_link }}">
+                <br>
                 <input id="project_description" type="submit" value="EDIT">
             </form>
         </div>
