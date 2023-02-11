@@ -13,6 +13,7 @@ class ProjectController extends Controller
     public function portfolio(){
 
         $projects = Project::all();
+        
         $data = [
             'projects' => $projects,
         ];
